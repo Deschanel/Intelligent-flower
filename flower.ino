@@ -228,7 +228,6 @@ void serialEvent() {
   }
   stringComplete = true;
 }
-
 void processMessage(aJsonObject *msg){
   aJsonObject* method = aJson.getObjectItem(msg, "M");
   aJsonObject* content = aJson.getObjectItem(msg, "C");     
