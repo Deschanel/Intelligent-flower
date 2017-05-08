@@ -8,3 +8,5 @@ The project belongs to IoT,for easily floriculture<p>
     3.talk to your flowers,this function is based on 3 API:Speech synthesis and Speech recognition from Baidu,Intelligent answer from tuling,but when you say words,such as watering,lighting and heating,the device do jobs as you say<br><br>
     4.other function .......... I have no idea,I hope some one can help me develop it,thank you
 </blockquote>
+<p>
+Here are My personal web site:https://www.chenzhuosdu.cn
