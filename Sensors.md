@@ -1,6 +1,6 @@
 The Main Lists:
 <blockquote>
-Arduino or Nodemcu with Arduino IDE<br>
+Arduino<br>
 DHT11<br>
 Photoresistor<br>
 Soil humidity monitoring module<br>
