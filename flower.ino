@@ -2,6 +2,8 @@
   Author:chenzhuo
   DateTime:5/2 2017
   Second Commit:5/4 2017
+  
+  You must have an account on http://www.bigiot.net/
  */
 #include <aJSON.h>
 #include <Wire.h> 
@@ -20,13 +22,13 @@ int yuyin;
 int LED = 8;
 int PUMP = 7;
 int HEAT = 4;
-//=============  此处必须修改============
-String DEVICEID="1940"; // 你的设备ID=======
-String APIKEY="2f275241c"; // 设备密码==
-String INPUTID1="1920";//接口ID1==============
-String INPUTID2="1925";
-String INPUTID3="2029";
-String INPUTID4="2030";
+
+String DEVICEID="xxx"; // 你的设备ID=======
+String APIKEY="xxx"; // 设备密码==
+String INPUTID1="xxx";//接口ID1==============
+String INPUTID2="xxx";
+String INPUTID3="xxx";
+String INPUTID4="xxx";
 //=======================================
 unsigned long lastCheckInTime = 0; //记录上次报到时间
 unsigned long lastUpdateTime = 0;//记录上次上传数据时间
@@ -63,7 +65,7 @@ void loop()
   if(millis() - lastCheckInTime > postingInterval || lastCheckInTime==0) {
     checkIn();
   }
-  int chk = DHT11.read(DHT11PIN); //加上这句就无法控制灯，不知道为啥
+  int chk = DHT11.read(DHT11PIN); 
   int valt = DHT11.temperature;
   int valh = DHT11.humidity;
   sensorValue = analogRead(sensorPin);
@@ -157,7 +159,7 @@ void speech(signed int val){
 	  startLightTime = millis();
     }else if(17 == val)
     {
-      digitalWrite(LED, LOW);//如果识别到关灯，就熄灭LED。
+      digitalWrite(LED, LOW);
 	  lastLightTime = millis();
     }else if(22 == val){
       digitalWrite(PUMP, HIGH);
